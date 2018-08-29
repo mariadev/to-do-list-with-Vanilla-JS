@@ -48,17 +48,22 @@ function resetStorage(){
   localStorage.clear();
 }
 
+
 function select (){
-  const liInputAll = document.querySelectorAll('.li-input');                for (let i = 0; i <  liInputAll.length; i++) {
-    liInputAll[i].checked= true;
+  for (let i = 0; i <  items.length; i++) {
+    items[i].done= true;
   }
-  console.log(liInputAll[0].checked);
+  localStorage.setItem('items', JSON.stringify(items));
+  populateList(items, itemsList);
 }
 function deselect (){
-  const liInputAll = document.querySelectorAll('.li-input');                for (let i = 0; i <  liInputAll.length; i++) {
-    liInputAll[i].checked= false;
+  for (let i = 0; i <  items.length; i++) {
+    items[i].done= false;
   }
+  localStorage.setItem('items', JSON.stringify(items));
+  populateList(items, itemsList);
 }
+
 addItems.addEventListener('submit', addItem);
 itemsList.addEventListener('click', toggleDone);
 buttonReset.addEventListener('click',resetStorage);
