@@ -4,9 +4,21 @@ const itemsList = document.querySelector('.plates');
 const buttonReset = document.querySelector('.button-reset');
 const buttonSelect = document.querySelector('.button-select');
 const buttonDeselect = document.querySelector('.button-deselect');
-//const html = document.querySelector('html');
+const wrapper= document.querySelector('.wrapper');
+const html = document.querySelector('html');
 let items = JSON.parse(localStorage.getItem('items')) || [];
+const listImages= ['images/DomenichinounicornPalFarnese.jpg','images/Lady_with_unicorn_by_Rafael_Santi.jpg','images/Moretto_da_Brescia_001b.jpg','images/thelady.jpg','images/Gustave.jpg'];
 
+function choosePic() {
+  let randomNum = Math.floor((Math.random() * listImages.length));
+  html.style.background= `url(${listImages[4]}) left no-repeat`;
+  html.style.backgroundSize= 'cover';
+}
+choosePic();
+function removehidden(){
+  wrapper.classList.remove('hidden');
+}
+setTimeout(removehidden, 3000);
 
 function addItem(e) {
   e.preventDefault();
