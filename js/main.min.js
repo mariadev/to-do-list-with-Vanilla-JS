@@ -4,7 +4,8 @@ const itemsList = document.querySelector('.plates');
 const buttonReset = document.querySelector('.button-reset');
 const buttonSelect = document.querySelector('.button-select');
 const buttonDeselect = document.querySelector('.button-deselect');
-const items = JSON.parse(localStorage.getItem('items')) || [];
+//const html = document.querySelector('html');
+let items = JSON.parse(localStorage.getItem('items')) || [];
 
 
 function addItem(e) {
@@ -38,16 +39,11 @@ function toggleDone(e) {
   populateList(items, itemsList);
 }
 
-//my functions
 function resetStorage(){
-  console.log('hola');
-  const liListAll= document.querySelectorAll('.li-list');
-  for (let i = 0; i < liListAll.length; i++) {
-    itemsList.removeChild(liListAll[i]);
-  }
-  localStorage.clear();
+  items = [];
+  populateList(items, itemsList);
+  localStorage.setItem('items', JSON.stringify(items));
 }
-
 
 function select (){
   for (let i = 0; i <  items.length; i++) {
