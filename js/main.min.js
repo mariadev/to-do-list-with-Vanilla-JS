@@ -7,7 +7,7 @@ const buttonDeselect = document.querySelector('.button-deselect');
 const wrapper= document.querySelector('.wrapper');
 const html = document.querySelector('html');
 let items = JSON.parse(localStorage.getItem('items')) || [];
-const listImages= ['./images/DomenichinounicornPalFarnese.jpg','./images/Lady_with_unicorn_by_Rafael_Santi.jpg','./images/Moretto_da_Brescia_001b.jpg','./images/thelady.jpg','./images/Gustave.jpg'];
+const listImages= ['./images/DomenichinounicornPalFarnese.jpg','./images/Lady_with_unicorn_by_Rafael_Santi.jpg','./images/Moretto_da_Brescia_001b.jpg','./images/thelady.jpg','./images/gustave.jpg'];
 
 function choosePic() {
   let randomNum = Math.floor((Math.random() * listImages.length));
