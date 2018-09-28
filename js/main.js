@@ -8,12 +8,12 @@ const wrapper= document.querySelector('.wrapper');
 const html = document.querySelector('html');
 const x = window.matchMedia('(max-width: 1000px)');
 let items = JSON.parse(localStorage.getItem('items')) || [];
-const listImages= ['./images/DomenichinounicornPalFarnese.jpg','./images/Lady_with_unicorn_by_Rafael_Santi.jpg','./images/Moretto_da_Brescia_001b.jpg','./images/thelady.jpg','./images/gustave.jpg'];
+const listImages= ['./images/forest1.jpg','./images/forest2.jpg','./images/forest3.jpg'];
 
 function choosePic() {
   let randomNum = Math.floor((Math.random() * listImages.length));
   html.style.background= `url(${listImages[randomNum]}) center no-repeat`;
-  html.style.backgroundSize = 'contain';
+  html.style.backgroundSize = 'cover';
 }
 choosePic();
 function removehidden(){
