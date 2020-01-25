@@ -15,11 +15,13 @@ function choosePic() {
   html.style.background= `url(${listImages[randomNum]}) center no-repeat`;
   html.style.backgroundSize = 'cover';
 }
+
 choosePic();
 function removehidden(){
   wrapper.classList.remove('hidden');
 }
-setTimeout(removehidden, 3000);
+
+setTimeout(removehidden, 500);
 
 function addItem(e) {
   e.preventDefault();
@@ -33,6 +35,7 @@ function addItem(e) {
   localStorage.setItem('items', JSON.stringify(items));
   this.reset();
 }
+
 function populateList(plates = [], platesList) {
   platesList.innerHTML = plates.map((plate, i) => {
     return `
@@ -43,6 +46,7 @@ function populateList(plates = [], platesList) {
     `;
   }).join('');
 }
+
 function toggleDone(e) {
   if (!e.target.matches('input')) return; // skip this unless it's an input
   const el = e.target;
@@ -65,6 +69,7 @@ function select (){
   localStorage.setItem('items', JSON.stringify(items));
   populateList(items, itemsList);
 }
+
 function deselect (){
   for (let i = 0; i <  items.length; i++) {
     items[i].done= false;

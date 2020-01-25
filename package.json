@@ -3,24 +3,25 @@
 	"version": "1.0.0",
 	"description": "Adalab web starter kit",
 	"dependencies": {
-		"browser-sync": "^2.24.5",
+		"browser-sync": "^2.26.7",
 		"eslint": "^4.19.1",
-		"gulp-autoprefixer": "*",
-		"gulp-clean-css": "*",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-clean-css": "^4.2.0",
 		"gulp-combine-mq": "*",
 		"gulp-concat": "*",
 		"gulp-notify": "*",
-		"gulp-plumber": "*",
-		"gulp-rename": "*",
-		"gulp-sass": "*",
-		"gulp-sourcemaps": "*",
-		"gulp-uglify": "*",
+		"gulp-plumber": "^1.2.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-uglify": "^3.0.2",
 		"gulp-util": "*",
-		"gulp-zip": "*",
+		"gulp-zip": "^5.0.1",
+		"natives": "^1.1.6",
 		"run-sequence": "*"
 	},
 	"devDependencies": {
-		"gulp": "^4.0.0"
+		"gulp": "^4.0.2",
+		"gulp-sass": "^4.0.2"
 	},
 	"scripts": {
 		"start": "gulp",
